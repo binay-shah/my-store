@@ -1,0 +1,17 @@
+<div class="cart-container" >
+    <div class="cart-panel" *ngFor="let item of cartList"> 
+        <app-cart-item [cartItem]="item" (updateTotal)="updateTotal()"></app-cart-item>
+    </div>
+    <form class="form-margin" (ngSubmit)="onSubmit()">
+        <p>Full Name</p>
+        <input type="text" placeholder="(minimum 3 characters)" [(ngModel)]="fullName" name="fullname" />
+        <p>Address</p>
+        <input type="text" placeholder="(minimum 6 characters)" [(ngModel)]="address" name="address" />
+        <p>Credit Card Number</p>
+        <input type="text" placeholder="(16-digit number)" [(ngModel)]="creditCard" name="creditCard"/>
+        <br>
+        <input type="submit"> 
+    </form>
+    <p>Total: {{total}}</p>
+</div>
+

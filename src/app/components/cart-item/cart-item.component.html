@@ -1,0 +1,10 @@
+<div class="cart-item">
+    <img width=100 height=100 src={{cartItem.product.url}}>
+    <div class="cart-item-details">
+        <h2>{{cartItem.product.name}}</h2> 
+        <p>${{cartItem.product.price}}</p>
+        <p>Quantity: <input class="number-input" type="number" [(ngModel)]="cartItem.quantity" (change)="update()"></p>
+    </div>
+
+    
+</div>
