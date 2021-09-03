@@ -6,6 +6,12 @@ img {
   .form-margin {
     margin-bottom: 12px;
   }
+
+  .cart-item-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
   
   .cart-item {
     display: flex;
