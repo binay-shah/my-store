@@ -34,6 +34,7 @@ addToCart(): void{
     quantity: this.quantity,
   }
   this.cartService.addToCart(cartItem)
+  alert("Added to cart");
 }
 
   
