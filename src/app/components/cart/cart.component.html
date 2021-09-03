@@ -1,7 +1,7 @@
 <div class="cart-container" *ngIf="cartList.length > 0">
         <div class="cart-item-container">
             <div class="cart-panel"  *ngFor="let item of cartList"> 
-                <app-cart-item  [cartItem]="item" (updateTotal)="updateTotal()"></app-cart-item>
+                <app-cart-item  [cartItem]="item" (updateTotal)="updateTotal()" (removeItem)="removeItem($event)"></app-cart-item>
             </div>
             <h2>Total: ${{total}}</h2>
         </div>

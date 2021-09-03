@@ -31,4 +31,8 @@ export class CartComponent implements OnInit {
   onSubmit(): void {
     this.router.navigate(['confirmation'],  {state: {total: this.total, fullName: this.fullName}})
   }
+
+  removeItem(item: CartItem): void{
+    this.cartList = this.cartList.filter(c => c.product.id !== item.product.id)
+  }
 }

@@ -3,6 +3,7 @@
     <div class="cart-item-details">
         <h2>{{cartItem.product.name}}</h2> 
         <p>${{cartItem.product.price}}</p>
-        <p>Quantity: <input class="number-input" type="number" min="1" max="5" [(ngModel)]="cartItem.quantity" (change)="update()"></p>
+        <p>Quantity: <input class="number-input" type="number" min="1" max="5" [(ngModel)]="cartItem.quantity" (ngModelChange)="update()"></p>
+        <button (click) = "remove(cartItem)">Remove</button>
     </div>
 </div>
